@@ -587,6 +587,11 @@ export function ExchangeConfigModal({
                     </div>
                   )}
                   {/* Testnet Option */}
+                  <div className="p-4 rounded-xl" style={{ background: 'rgba(240, 185, 11, 0.1)', border: '1px solid rgba(240, 185, 11, 0.2)' }}>
+                    <div className="text-sm font-semibold" style={{ color: '#F0B90B' }}>
+                      Debug: currentExchangeType = {currentExchangeType}
+                    </div>
+                  </div>
                   {(currentExchangeType === 'binance' || currentExchangeType === 'bybit' || currentExchangeType === 'gate' || currentExchangeType === 'kucoin') && (
                     <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(14, 203, 129, 0.1)', border: '1px solid rgba(14, 203, 129, 0.2)' }}>
                       <input
