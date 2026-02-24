@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/antihax/optional"
-	"github.com/gateio/gateapi-go/v6"
+	"https://api-testnet.gateapi.io/api/v4"
 	"nofx/logger"
 	"nofx/trader/types"
 )
