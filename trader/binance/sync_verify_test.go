@@ -32,7 +32,7 @@ func TestBinanceSyncVerification(t *testing.T) {
 	}
 	db := st.GormDB()
 
-	trader := NewFuturesTrader(apiKey, secretKey, "test-user")
+	trader := NewFuturesTrader(apiKey, secretKey, "test-user", false)
 
 	traderID := "test-trader-id"
 	exchangeID := "test-exchange-id"
