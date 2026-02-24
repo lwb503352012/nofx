@@ -37,6 +37,8 @@ type GateTrader struct {
 // NewGateTrader creates a new Gate trader instance
 func NewGateTrader(apiKey, secretKey string) *GateTrader {
 	config := gateapi.NewConfiguration()
+	// Set testnet endpoint
+	config.BasePath = "https://api-testnet.gateapi.io/api/v4"
 	config.AddDefaultHeader("X-Gate-Channel-Id", "nofx")
 	client := gateapi.NewAPIClient(config)
 
