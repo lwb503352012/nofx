@@ -586,6 +586,27 @@ export function ExchangeConfigModal({
                       />
                     </div>
                   )}
+                  {/* Testnet Option */}
+                  {(currentExchangeType === 'binance' || currentExchangeType === 'bybit' || currentExchangeType === 'gate' || currentExchangeType === 'kucoin') && (
+                    <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(14, 203, 129, 0.1)', border: '1px solid rgba(14, 203, 129, 0.2)' }}>
+                      <input
+                        type="checkbox"
+                        id="testnet"
+                        checked={testnet}
+                        onChange={(e) => setTestnet(e.target.checked)}
+                        className="w-5 h-5 rounded cursor-pointer"
+                        style={{ accentColor: '#0ECB81' }}
+                      />
+                      <label htmlFor="testnet" className="flex-1 cursor-pointer">
+                        <div className="text-sm font-semibold" style={{ color: '#0ECB81' }}>
+                          {language === 'zh' ? '使用测试网' : 'Use Testnet'}
+                        </div>
+                        <div className="text-xs" style={{ color: '#848E9C' }}>
+                          {language === 'zh' ? '连接到交易所测试环境，用于测试和开发' : 'Connect to exchange testnet for testing and development'}
+                        </div>
+                      </label>
+                    </div>
+                  )}
 
                   {currentExchangeType === 'binance' && (
                     <div className="p-4 rounded-xl" style={{ background: 'rgba(240, 185, 11, 0.1)', border: '1px solid rgba(240, 185, 11, 0.2)' }}>
