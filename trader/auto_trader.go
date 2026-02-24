@@ -38,7 +38,8 @@ type AutoTraderConfig struct {
 	// Binance API configuration
 	BinanceAPIKey    string
 	BinanceSecretKey string
-
+    BinanceTestnet   bool
+	
 	// Bybit API configuration
 	BybitAPIKey    string
 	BybitSecretKey string
