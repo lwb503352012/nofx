@@ -66,7 +66,9 @@ type FuturesTrader struct {
 func NewFuturesTrader(apiKey, secretKey string, userId string) *FuturesTrader {
 	client := futures.NewClient(apiKey, secretKey)
     // Set testnet endpoint
-	client.BaseURL = "https://testnet.binancefuture.com"
+	if testnet {
+	    client.BaseURL = "https://testnet.binancefuture.com"
+	}
 
 	hookRes := hook.HookExec[hook.NewBinanceTraderResult](hook.NEW_BINANCE_TRADER, userId, client)
 	if hookRes != nil && hookRes.GetResult() != nil {
