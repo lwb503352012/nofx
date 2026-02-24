@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/antihax/optional"
-	"github.com/gateio/gateapi-go/v6"
+	"https://api-testnet.gateapi.io/api/v4"
 )
 
 // GateTrade represents a trade record from Gate fill history
